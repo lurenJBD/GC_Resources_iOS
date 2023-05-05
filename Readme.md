@@ -1,18 +1,18 @@
-## 说明
-本项目是从某个二次元游戏里抓包获取的链接资源，主要为实现以后能继续在iOS平台上爽快游玩，但由于本人实在是能力有限，没法独立完成，所以需要各位大佬的帮忙！
+## Description
+This project is a collection of resources obtained by capturing packets from a certain anime-style game. The main purpose is to enable smooth gameplay on the iOS platform in the future. However, due to my limited ability, I cannot complete it independently, so I need help from experienced people.
 
-## 进度说明
-目前已经完成了3.3版本的iOS端全资源收集，写了一个很简单的python脚本来实现文件的下载，后面看情况写一下对下载文件校验的实现。目前还没能完成一次验证获取的文件是否完整可用，因为还没能实现对客户端的连接访问的替换。
+## Progress
+Currently, the full resource collection for version 3.3 of the iOS platform has been completed, and a simple python script has been written to download the files. I may write a verification implementation for downloaded files later. Currently, I cannot verify whether the downloaded files are complete and usable because I have not been able to replace the connection access to the client.
 
-## 目前知道的情况
-在`release_res_versions_external`这个文件内有，所有文件的路径和MD5，但并不知道文件的下载链接，所以即使确实缺了文件，也比较难以快速补齐。只能说如果获得的链接数量是完整，那对应的文件应该也是完整的。
+## Current situation
+The paths and MD5 of all files are contained in the release_res_versions_external file, but I do not know the download links for the files. Therefore, even if a file is missing, it is difficult to quickly complete it. It can only be said that if the number of links obtained is complete, the corresponding files should also be complete.
 
-## 需要解决的问题
-未来可能需要用的，为了能让旧版的客户端获得回原本的版本信息，而不是最新的版本信息，进而实现保证旧版iOS客户端也能继续使用第三方提供的Resources资源
+## Problems to be solved
+In the future, it may be necessary to allow the old version of the client to return to the original version information instead of the latest version information, in order to ensure that the old version of the iOS client can continue to use the resources provided by third parties.
 
-以下抓包内容只是对下载资源的版本的猜测，还没弄明白客户端是如何获得资源信息的。
+The captured packet content is only a guess about the version of the downloaded resources, and I have not figured out how the client obtains resource information.
 
-** 请求内容 Request: **
+**Request Content:**
 
 	GET /query_cur_region?version=OSRELiOS3.3.0&lang=2&platform=1&binary=1&time=248&channel_id=1&sub_channel_id=0&account_type=1&dispatchSeed=61f2ff392de2a5bc&key_id=5 HTTP/1.1
 	Host: osasiadispatch.yuanshen.com
@@ -24,7 +24,7 @@
 	Accept-Encoding: gzip, deflate, br
 	X-Unity-Version: 2017.4.30f1
 
-**响应内容 Response:**
+**Response content:**
 
 	HTTP/1.1 200 OK
 	Date: Sat, 10 Dec 2022 10:05:23 GMT
